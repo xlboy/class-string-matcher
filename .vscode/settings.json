@@ -1,4 +1,7 @@
 {
-    "typescript.tsdk": "node_modules/typescript/lib",
-    "debug.allowBreakpointsEverywhere": true
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "debug.allowBreakpointsEverywhere": true,
+  "github.copilot.enable": {
+    "*": true,
+  }
 }

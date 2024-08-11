@@ -1,14 +1,11 @@
 {
-  "name": "class-context-parser",
-  "version": "0.1.0",
-  "description": "",
-  "keywords": [],
+  "name": "class-string-matcher",
+  "version": "0.1.0-dev.3",
   "author": "xlboy",
   "license": "MIT",
   "publishConfig": {
     "access": "public"
   },
-  "type": "module",
   "files": [
     "dist"
   ],
@@ -16,8 +13,18 @@
     "node": ">=20.0.0",
     "pnpm": "^9.0.0"
   },
-  "packageManager": "pnpm@9.0.0",
-  "main": "./dist/index.cjs",
+  "packageManager": "pnpm@9.7.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
   "scripts": {
     "test": "vitest",
     "build": "tsup",
@@ -28,14 +35,13 @@
     "@tsconfig/node20": "^20.1.4",
     "@types/moo": "^0.5.9",
     "@types/node": "20.14.10",
-    "chevrotain": "^11.0.3",
     "prettier": "^3.3.2",
     "tsup": "^8.1.0",
     "typescript": "^5.5.3",
-    "verbal-expressions": "^1.0.2",
     "vitest": "^2.0.2"
   },
   "peerDependencies": {
     "moo": "^0.5.2"
-  }
+  },
+  "dependencies": {}
 }

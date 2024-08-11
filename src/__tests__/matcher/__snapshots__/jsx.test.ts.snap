@@ -1,0 +1,245 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`""> 1`] = `
+[
+  {
+    "pos": {
+      "e": 1,
+      "s": 1,
+    },
+    "text": "",
+  },
+]
+`;
+
+exports[`"text-red text-lg" 1`] = `
+[
+  {
+    "pos": {
+      "e": 16,
+      "s": 1,
+    },
+    "text": "text-red text-lg",
+  },
+]
+`;
+
+exports[`'a b c d ', ../... 1`] = `
+[
+  {
+    "pos": {
+      "e": 8,
+      "s": 1,
+    },
+    "text": "a b c d ",
+  },
+]
+`;
+
+exports[`'text-blue  ...' 1`] = `
+[
+  {
+    "pos": {
+      "e": 14,
+      "s": 1,
+    },
+    "text": "text-blue  ...",
+  },
+]
+`;
+
+exports[`(a + "text-red" + c) 1`] = `
+[
+  {
+    "pos": {
+      "e": 13,
+      "s": 6,
+    },
+    "text": "text-red",
+  },
+]
+`;
+
+exports[`(a + {b: 'text-red'} + ["test"]) 1`] = `
+[
+  {
+    "pos": {
+      "e": 17,
+      "s": 10,
+    },
+    "text": "text-red",
+  },
+  {
+    "pos": {
+      "e": 28,
+      "s": 25,
+    },
+    "text": "test",
+  },
+]
+`;
+
+exports[`(a + {b: 'text-red'} + c + 'text-lg', 'text-sm', \`haha- \${false || 'hacker'}\`) 1`] = `
+[
+  {
+    "pos": {
+      "e": 17,
+      "s": 10,
+    },
+    "text": "text-red",
+  },
+  {
+    "pos": {
+      "e": 34,
+      "s": 28,
+    },
+    "text": "text-lg",
+  },
+  {
+    "pos": {
+      "e": 45,
+      "s": 39,
+    },
+    "text": "text-sm",
+  },
+  {
+    "pos": {
+      "e": 55,
+      "s": 50,
+    },
+    "text": "haha- ",
+  },
+  {
+    "pos": {
+      "e": 73,
+      "s": 68,
+    },
+    "text": "hacker",
+  },
+]
+`;
+
+exports[`(a + b + c) 1`] = `[]`;
+
+exports[`\`text-red \${true && 'text-lg'} \${false && 'text-sm'}\` 1`] = `
+[
+  {
+    "pos": {
+      "e": 9,
+      "s": 1,
+    },
+    "text": "text-red ",
+  },
+  {
+    "pos": {
+      "e": 27,
+      "s": 21,
+    },
+    "text": "text-lg",
+  },
+  {
+    "pos": {
+      "e": 30,
+      "s": 30,
+    },
+    "text": " ",
+  },
+  {
+    "pos": {
+      "e": 49,
+      "s": 43,
+    },
+    "text": "text-sm",
+  },
+]
+`;
+
+exports[`\`text-red \${true && 'text-lg'}\` 1`] = `
+[
+  {
+    "pos": {
+      "e": 9,
+      "s": 1,
+    },
+    "text": "text-red ",
+  },
+  {
+    "pos": {
+      "e": 27,
+      "s": 21,
+    },
+    "text": "text-lg",
+  },
+]
+`;
+
+exports[`{"a b c d"} 1`] = `
+[
+  {
+    "pos": {
+      "e": 8,
+      "s": 2,
+    },
+    "text": "a b c d",
+  },
+]
+`;
+
+exports[`{'bbb' + "ccc" + \`ddd\` + \`eeee \${true && 'fff'} 那天车窗起雾\`} >你好</div> 1`] = `
+[
+  {
+    "pos": {
+      "e": 4,
+      "s": 2,
+    },
+    "text": "bbb",
+  },
+  {
+    "pos": {
+      "e": 12,
+      "s": 10,
+    },
+    "text": "ccc",
+  },
+  {
+    "pos": {
+      "e": 20,
+      "s": 18,
+    },
+    "text": "ddd",
+  },
+  {
+    "pos": {
+      "e": 30,
+      "s": 26,
+    },
+    "text": "eeee ",
+  },
+  {
+    "pos": {
+      "e": 44,
+      "s": 42,
+    },
+    "text": "fff",
+  },
+  {
+    "pos": {
+      "e": 53,
+      "s": 47,
+    },
+    "text": " 那天车窗起雾",
+  },
+]
+`;
+
+exports[`{a: 'b c d'} 1`] = `
+[
+  {
+    "pos": {
+      "e": 9,
+      "s": 5,
+    },
+    "text": "b c d",
+  },
+]
+`;
