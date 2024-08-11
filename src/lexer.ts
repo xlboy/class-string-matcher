@@ -43,3 +43,8 @@ export const jsxLexer = moo.states({
     ignore: { match: /[\s\S]/, lineBreaks: true },
   },
 });
+
+// 涉及场景： `<div ... />`
+// 涉及场景： `<script>...</script>`
+// 用 jsxLexer 这套也够
+export const htmlLexer = jsxLexer;

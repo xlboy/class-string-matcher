@@ -1,9 +1,10 @@
-import { jsxLexer } from './lexer';
+import { htmlLexer, jsxLexer } from './lexer';
 import type { ClassNode, LanguageId } from './types';
 import moo from 'moo';
 
 const lexers = {
   jsx: jsxLexer,
+  html: htmlLexer,
 } satisfies Record<LanguageId, moo.Lexer>;
 
 export function classStringMatcher(

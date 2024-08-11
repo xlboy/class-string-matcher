@@ -1,4 +1,4 @@
-export type LanguageId = 'jsx';
+export type LanguageId = 'jsx' | 'html';
 
 export interface ClassNode {
   text: string;
