@@ -2,7 +2,7 @@
 
 轻松解析 `react/vue/svelte/...` 中的 class 定义
 
-## 为什么需要这玩意儿？
+## 为什么需要它？
 
 先看下面这些复杂的 class 定义
 ![image](https://github.com/user-attachments/assets/4af40a89-153d-4393-a922-1777bed44a22)
@@ -23,3 +23,8 @@
 
 
 ![image](https://github.com/user-attachments/assets/934f9c88-74b1-4385-8bfb-2e44a5c2899b)
+
+
+## 使用方法
+
+...待编写
