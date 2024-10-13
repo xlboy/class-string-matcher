@@ -1,0 +1,49 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`pure > ""> 1`] = `
+[
+  {
+    "pos": {
+      "e": 1,
+      "s": 1,
+    },
+    "text": "",
+  },
+]
+`;
+
+exports[`pure > "text-red text-lg" 1`] = `
+[
+  {
+    "pos": {
+      "e": 16,
+      "s": 1,
+    },
+    "text": "text-red text-lg",
+  },
+]
+`;
+
+exports[`pure > 'a b c d ', ../... 1`] = `
+[
+  {
+    "pos": {
+      "e": 8,
+      "s": 1,
+    },
+    "text": "a b c d ",
+  },
+]
+`;
+
+exports[`pure > 'text-blue  ...' 1`] = `
+[
+  {
+    "pos": {
+      "e": 14,
+      "s": 1,
+    },
+    "text": "text-blue  ...",
+  },
+]
+`;

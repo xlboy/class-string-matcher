@@ -1,2 +1,1 @@
-export type { ClassNode, LanguageId } from './types';
-export { classStringMatcher } from './matcher';
+export { classStringMatcher, type ClassNode, type LanguageId } from './matcher';
