@@ -65,7 +65,66 @@ export const vuePureLexer = moo.states({
   },
 });
 
-export const vueDynamicLexer = moo.states(jsValueLexerRules);
+export const vueDynamicLexer = moo.states({
+  main: {
+    start: [
+      { match: '"', push: `d"..."` },
+      { match: "'", push: `d'...'` },
+      // tx`...`
+      { match: '`', push: '`...`' },
+      // tw(...)
+      { match: '(', push: '(...)' },
+    ],
+  },
+  [`p"..."`]: {
+    end: { match: /(?<!\\)"/, pop: 1 },
+    content: { match: /[\s\S]/, lineBreaks: true },
+  },
+  [`d"..."`]: {
+    end: { match: /(?<!\\)"/, pop: 1 },
+    children: [
+      { match: "'", push: `p'...'` },
+      { match: '`', push: '`...`' },
+    ],
+    ignore: { match: /[\s\S]/, lineBreaks: true },
+  },
+  [`p'...'`]: {
+    end: { match: /(?<!\\)'/, pop: 1 },
+    content: { match: /[\s\S]/, lineBreaks: true },
+  },
+  [`d'...'`]: {
+    end: { match: /(?<!\\)'/, pop: 1 },
+    children: [
+      { match: '"', push: `p"..."` },
+      { match: '`', push: '`...`' },
+    ],
+    ignore: { match: /[\s\S]/, lineBreaks: true },
+  },
+  ['`...`']: {
+    children: { match: /\${/, push: '{...}' },
+    end: { match: /(?<!\\)`/, pop: 1 },
+    content: { match: /[\s\S]/, lineBreaks: true },
+  },
+  ['{...}']: {
+    end: { match: /(?<!\\)}/, pop: 1 },
+    children: [
+      { match: '"', push: `p"..."` },
+      { match: "'", push: `p'...'` },
+      { match: '`', push: '`...`' },
+    ],
+    ignore: { match: /[\s\S]/, lineBreaks: true },
+  },
+  ['(...)']: {
+    end: { match: /(?<!\\)\)/, pop: 1 },
+    children: [
+      { match: '"', push: `p"..."` },
+      { match: "'", push: `p'...'` },
+      { match: '`', push: '`...`' },
+      { match: '{', push: '{...}' },
+    ],
+    ignore: { match: /[\s\S]/, lineBreaks: true },
+  },
+});
 
 export const solidLexer = moo.states(jsValueLexerRules);
 
