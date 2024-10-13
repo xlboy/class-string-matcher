@@ -66,3 +66,5 @@ export const vuePureLexer = moo.states({
 });
 
 export const vueDynamicLexer = moo.states(jsValueLexerRules);
+
+export const solidLexer = moo.states(jsValueLexerRules);

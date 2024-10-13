@@ -1,7 +1,13 @@
-import { htmlLexer, jsxLexer, vueDynamicLexer, vuePureLexer } from './lexer';
+import {
+  htmlLexer,
+  jsxLexer,
+  solidLexer,
+  vueDynamicLexer,
+  vuePureLexer,
+} from './lexer';
 import moo from 'moo';
 
-const SUPPORTED_LANGUAGE_IDS = ['jsx', 'html', 'vue'] as const;
+const SUPPORTED_LANGUAGE_IDS = ['jsx', 'html', 'vue', 'solid'] as const;
 export type LanguageId = (typeof SUPPORTED_LANGUAGE_IDS)[number];
 
 export interface ClassNode {
@@ -43,6 +49,9 @@ export function classStringMatcher(
       break;
     case 'vue':
       lexer = options?.inDynamicContext ? vueDynamicLexer : vuePureLexer;
+      break;
+    case 'solid':
+      lexer = solidLexer;
       break;
     case 'html':
     default:
