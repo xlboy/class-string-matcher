@@ -126,6 +126,4 @@ export const vueDynamicLexer = moo.states({
   },
 });
 
-export const solidLexer = moo.states(jsValueLexerRules);
-
 export const svelteLexer = moo.states(jsValueLexerRules);
