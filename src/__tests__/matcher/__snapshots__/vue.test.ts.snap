@@ -1,0 +1,175 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`dynamic > ""> 1`] = `
+[
+  {
+    "pos": {
+      "e": 1,
+      "s": 1,
+    },
+    "text": "",
+  },
+]
+`;
+
+exports[`dynamic > "'a b c d '", ../... 1`] = `
+[
+  {
+    "pos": {
+      "e": 9,
+      "s": 2,
+    },
+    "text": "a b c d ",
+  },
+]
+`;
+
+exports[`dynamic > "'text-red' + 'text-lg'" 1`] = `
+[
+  {
+    "pos": {
+      "e": 9,
+      "s": 2,
+    },
+    "text": "text-red",
+  },
+  {
+    "pos": {
+      "e": 21,
+      "s": 15,
+    },
+    "text": "text-lg",
+  },
+]
+`;
+
+exports[`dynamic > "['1', '2', '3', \`test1 \${'test2'}\`]" 1`] = `
+[
+  {
+    "pos": {
+      "e": 3,
+      "s": 3,
+    },
+    "text": "1",
+  },
+  {
+    "pos": {
+      "e": 8,
+      "s": 8,
+    },
+    "text": "2",
+  },
+  {
+    "pos": {
+      "e": 13,
+      "s": 13,
+    },
+    "text": "3",
+  },
+  {
+    "pos": {
+      "e": 23,
+      "s": 18,
+    },
+    "text": "test1 ",
+  },
+  {
+    "pos": {
+      "e": 31,
+      "s": 27,
+    },
+    "text": "test2",
+  },
+]
+`;
+
+exports[`dynamic > '"text-blue" ...' 1`] = `
+[
+  {
+    "pos": {
+      "e": 10,
+      "s": 2,
+    },
+    "text": "text-blue",
+  },
+]
+`;
+
+exports[`dynamic > ('text-red', 'text-lg') 1`] = `
+[
+  {
+    "pos": {
+      "e": 9,
+      "s": 2,
+    },
+    "text": "text-red",
+  },
+  {
+    "pos": {
+      "e": 20,
+      "s": 14,
+    },
+    "text": "text-lg",
+  },
+]
+`;
+
+exports[`dynamic > \`text-ggg\` 1`] = `
+[
+  {
+    "pos": {
+      "e": 8,
+      "s": 1,
+    },
+    "text": "text-ggg",
+  },
+]
+`;
+
+exports[`pure > ""> 1`] = `
+[
+  {
+    "pos": {
+      "e": 1,
+      "s": 1,
+    },
+    "text": "",
+  },
+]
+`;
+
+exports[`pure > "text-red text-lg" 1`] = `
+[
+  {
+    "pos": {
+      "e": 16,
+      "s": 1,
+    },
+    "text": "text-red text-lg",
+  },
+]
+`;
+
+exports[`pure > 'a b c d ', ../... 1`] = `
+[
+  {
+    "pos": {
+      "e": 8,
+      "s": 1,
+    },
+    "text": "a b c d ",
+  },
+]
+`;
+
+exports[`pure > 'text-blue  ...' 1`] = `
+[
+  {
+    "pos": {
+      "e": 14,
+      "s": 1,
+    },
+    "text": "text-blue  ...",
+  },
+]
+`;
